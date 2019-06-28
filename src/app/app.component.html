@@ -1,12 +1,20 @@
-<td-tab-select #tabSelect [(ngModel)]="selectedTab">
+<p>
+  Use the button to add a few tabs, notice that nothing happens, then switch tab.
+</p>
+
+<p>
+  <button mat-button (click)="addTab()">Add tab</button>
+  <button mat-button (click)="removeTab()">Remove tab</button>
+</p>
+
+<p><b><code>td-tab-select</code>:</b></p>
+<td-tab-select [(ngModel)]="selectedTab">
   <td-tab-option *ngFor="let tab of tabs" [value]="tab">
     {{tab}}
   </td-tab-option>
 </td-tab-select>
-<p>
-  Selected tab: {{ selectedTab }}
-</p>
-<p>
-  <button mat-button (click)="addTab(tabSelect)">Add tab</button>
-  <button mat-button (click)="removeTab(tabSelect)">Remove tab</button>
-</p>
+
+<p><b><code>mat-tab-group</code>:</b></p>
+<mat-tab-group>
+  <mat-tab *ngFor="let tab of tabs" [label]="tab"></mat-tab>
+</mat-tab-group>

@@ -9,13 +9,12 @@ import { TdTabSelectComponent } from '@covalent/core/tab-select';
 })
 export class AppComponent  {
   private tabs = ["First", "Second"];
-  private selectedTab = this.tabs[0];
 
-  addTab(tabSelect: TdTabSelectComponent) {
+  addTab() {
     this.tabs.push(`Tab ${this.tabs.length + 1}`);
   }
 
-  removeTab(tabSelect: TdTabSelectComponent) {
+  removeTab() {
     this.tabs.pop();
   }
 }
