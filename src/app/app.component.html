@@ -7,14 +7,8 @@
   <button mat-button (click)="removeTab()">Remove tab</button>
 </p>
 
-<p><b><code>td-tab-select</code>:</b></p>
 <td-tab-select [(ngModel)]="selectedTab">
   <td-tab-option *ngFor="let tab of tabs" [value]="tab">
     {{tab}}
   </td-tab-option>
 </td-tab-select>
-
-<p><b><code>mat-tab-group</code>:</b></p>
-<mat-tab-group>
-  <mat-tab *ngFor="let tab of tabs" [label]="tab"></mat-tab>
-</mat-tab-group>

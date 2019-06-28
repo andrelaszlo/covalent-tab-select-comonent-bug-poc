@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
 
 import { CovalentTabSelectModule } from '@covalent/core/tab-select';
 import { CovalentLayoutModule } from '@covalent/core/layout';
@@ -13,7 +12,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
-    BrowserModule, FormsModule, MatButtonModule, MatTabsModule,
+    BrowserModule, FormsModule, MatButtonModule,
     CovalentLayoutModule, CovalentStepsModule, CovalentTabSelectModule
   ],
   declarations: [ AppComponent ],
